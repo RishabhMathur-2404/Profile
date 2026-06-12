@@ -32,7 +32,7 @@
   --maxw:      1120px;
 }
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;overflow-x:hidden}
 body{
   background:var(--bg);
   color:var(--text);
@@ -220,7 +220,7 @@ section{padding:110px 32px;max-width:var(--maxw);margin:0 auto;position:relative
 }
 .tl-item:nth-child(odd) .tl-card{transform:translateX(-110px) translateY(40px) rotate(-2.5deg) scale(.94)}
 .tl-item:nth-child(even) .tl-card{transform:translateX(110px) translateY(40px) rotate(2.5deg) scale(.94)}
-.tl-item.in .tl-card{opacity:1;transform:none}
+.tl-items .tl-item.in .tl-card{opacity:1;transform:none}
 .tl-card{
   background:linear-gradient(160deg, var(--panel-2), var(--panel));
   border:1px solid var(--line);border-radius:12px;
@@ -248,7 +248,8 @@ section{padding:110px 32px;max-width:var(--maxw);margin:0 auto;position:relative
 }
 @media(max-width:860px){
   .tl-item{width:calc(100% - 56px);align-self:flex-end !important}
-  .tl-item:nth-child(odd) .tl-card{transform:translateX(90px) translateY(36px) rotate(2deg) scale(.95)}
+  .tl-item:nth-child(odd) .tl-card,
+  .tl-item:nth-child(even) .tl-card{transform:translateY(40px) scale(.96)}
   .tl-items{gap:64px}
 }
 
