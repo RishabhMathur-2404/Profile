@@ -217,7 +217,6 @@ section{padding:110px 32px;max-width:var(--maxw);margin:0 auto;position:relative
 .tl-item .tl-card{
   opacity:0;
   transition:opacity 1s cubic-bezier(.22,1,.36,1), transform 1s cubic-bezier(.22,1,.36,1);
-  will-change:transform,opacity;
 }
 .tl-item:nth-child(odd) .tl-card{transform:translateX(-110px) translateY(40px) rotate(-2.5deg) scale(.94)}
 .tl-item:nth-child(even) .tl-card{transform:translateX(110px) translateY(40px) rotate(2.5deg) scale(.94)}
@@ -695,7 +694,15 @@ footer{
 
   /* ---------- generic scroll reveals ---------- */
   const io = new IntersectionObserver(entries=>{
-    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+    entries.forEach(e=>{
+      if(!e.isIntersecting) return;
+      const t = e.target; io.unobserve(t);
+      // Commit the initial (hidden) state, then flip on the next frame so the
+      // transition reliably schedules a repaint. Without this, iOS Safari can
+      // defer painting the first timeline card until the next touch/scroll.
+      void t.offsetHeight;
+      requestAnimationFrame(()=>{ t.classList.add('in'); });
+    });
   }, {threshold:.15, rootMargin:'0px 0px -40px 0px'});
   document.querySelectorAll('.reveal, .tl-item').forEach(el=>io.observe(el));
 
