@@ -1,797 +1,819 @@
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width initial-scale=1" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-PGZH8HT');</script>
-  <!-- End Google Tag Manager -->
-
-  <!-- Materialize - Compiled and minified CSS-->
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/css/materialize.min.css" />
-  <!-- Font Awesome Icon - CSS-->
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
-  <!-- Custom Styles-->
-  <link rel="stylesheet" href="./style.css" />
-  <title>Rishabh Mathur | Software Developer</title>
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126939217-2"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'UA-126939217-2');
-  </script>
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary" />
-  
-  
-  <meta name="twitter:description" content="Software Developer" />
-  <meta name="twitter:url" content="https://twitter.com/varad_bhogayata" />
-  <meta name="author" content="Varad Bhogayata" />
-  <meta name="description" content="Software Developer with a passion for backend development and artificial intelligence." />
-  <link rel="apple-touch-icon" sizes="57x57" href="./img/favicon/apple-icon-57x57.png" />
-  <link rel="apple-touch-icon" sizes="60x60" href="./img/favicon/apple-icon-60x60.png" />
-  <link rel="apple-touch-icon" sizes="72x72" href="./img/favicon/apple-icon-72x72.png" />
-  <link rel="apple-touch-icon" sizes="76x76" href="./img/favicon/apple-icon-76x76.png" />
-  <link rel="apple-touch-icon" sizes="114x114" href="./img/favicon/apple-icon-114x114.png" />
-  <link rel="apple-touch-icon" sizes="120x120" href="./img/favicon/apple-icon-120x120.png" />
-  <link rel="apple-touch-icon" sizes="144x144" href="./img/favicon/apple-icon-144x144.png" />
-  <link rel="apple-touch-icon" sizes="152x152" href="./img/favicon/apple-icon-152x152.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-icon-180x180.png" />
-  <link rel="icon" type="image/png" sizes="192x192" href="./img/favicon/android-icon-192x192.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="96x96" href="./img/favicon/favicon-96x96.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png" />
-  <link rel="manifest" href="./img/favicon/manifest.json" />
-  <meta name="msapplication-TileColor" content="#ffffff" />
-  <meta name="msapplication-TileImage" content="./img/favicon/ms-icon-144x144.png" />
-  <meta name="theme-color" content="#ffffff" />
-  <meta name="robots" content="index, follow" />
-  <!-- Google Site Verification for indexing -->
-  <meta name="google-site-verification" content="_qxK8tePiU2fhnwlwnJ7pkDFnj1k2EiKq_cYGy1Cb84" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rishabh Mathur — Full Stack Developer & AI Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Vesper+Libre:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Syne:wght@600;700;800&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   BLUEPRINT DUSK — design tokens
+   ============================================================ */
+:root{
+  --bg:        #0A1B2A;
+  --bg-deep:   #071320;
+  --panel:     #0E2438;
+  --panel-2:   #102B42;
+  --line:      rgba(127,170,205,.14);
+  --line-soft: rgba(127,170,205,.08);
+  --cyan:      #5FD4F4;
+  --cyan-dim:  rgba(95,212,244,.35);
+  --amber:     #FFB454;
+  --amber-dim: rgba(255,180,84,.18);
+  --text:      #DCE9F5;
+  --muted:     #8BA7BE;
+  --faint:     #5E7891;
+  --display:   'Syne', sans-serif;
+  --hero-display: 'Bricolage Grotesque', sans-serif;
+  --body:      'IBM Plex Sans', sans-serif;
+  --mono:      'IBM Plex Mono', monospace;
+  --maxw:      1120px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--body);
+  font-weight:300;
+  line-height:1.65;
+  overflow-x:hidden;
+  /* drafting grid */
+  background-image:
+    linear-gradient(var(--line-soft) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line-soft) 1px, transparent 1px);
+  background-size:56px 56px;
+}
+::selection{background:var(--amber);color:#1a1208}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--amber);outline-offset:3px;border-radius:4px}
 
+/* ============================================================
+   NAV
+   ============================================================ */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:18px 32px;
+  background:rgba(7,19,32,.72);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);
+  transform:translateY(-100%);
+  animation:navIn .8s cubic-bezier(.22,1,.36,1) .9s forwards;
+}
+@keyframes navIn{to{transform:translateY(0)}}
+.nav-brand{font-family:var(--mono);font-size:13px;letter-spacing:.08em;color:var(--cyan)}
+.nav-brand b{color:var(--text);font-weight:500}
+.nav-links{display:flex;gap:28px;font-family:var(--mono);font-size:12px;letter-spacing:.1em}
+.nav-links a{color:var(--muted);transition:color .25s;text-transform:uppercase}
+.nav-links a:hover{color:var(--amber)}
+@media(max-width:720px){.nav-links{display:none}}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero{
+  min-height:100vh;
+  min-height:100svh;
+  display:flex;flex-direction:column;justify-content:center;
+  position:relative;
+  padding:120px 32px 80px;
+  max-width:var(--maxw);margin:0 auto;
+}
+#constellation{
+  position:absolute;inset:0;width:100%;height:100%;
+  pointer-events:none;opacity:.55;
+}
+.hero-inner{position:relative;z-index:2}
+.hero-eyebrow{
+  font-family:var(--mono);font-size:13px;letter-spacing:.18em;
+  color:var(--amber);text-transform:uppercase;
+  display:flex;align-items:center;gap:14px;
+  opacity:0;animation:rise .9s cubic-bezier(.22,1,.36,1) .15s forwards;
+}
+.hero-eyebrow::before{content:'';width:42px;height:1px;background:var(--amber)}
+.hero h1{
+  font-family:var(--hero-display);font-weight:800;
+  font-optical-sizing:auto;
+  font-size:clamp(44px, 8.2vw, 104px);
+  line-height:1.0;letter-spacing:-.028em;
+  margin:22px 0 10px;
+  opacity:0;animation:rise 1s cubic-bezier(.22,1,.36,1) .3s forwards;
+}
+.hero h1 .stroke{
+  color:transparent;
+  -webkit-text-stroke:1.5px var(--cyan-dim);
+  display:block;
+}
+.hero-stream{
+  margin-top:26px;max-width:640px;
+  font-family:var(--hero-display);font-weight:500;
+  font-size:clamp(15px,1.6vw,18px);color:var(--muted);
+  position:relative;
+  opacity:0;animation:rise .8s ease .55s forwards;
+}
+.stream-ghost{visibility:hidden;display:block}
+.stream-live{position:absolute;inset:0}
+.cursor{
+  display:inline-block;width:9px;height:1.1em;background:var(--amber);
+  vertical-align:text-bottom;margin-left:3px;
+  animation:blink 1s steps(1) infinite;
+}
+@keyframes blink{50%{opacity:0}}
+.hero-cta{
+  display:flex;gap:18px;flex-wrap:wrap;margin-top:38px;
+  opacity:0;animation:rise .8s ease .75s forwards;
+}
+.btn{
+  font-family:var(--mono);font-size:13px;letter-spacing:.08em;
+  padding:14px 26px;border-radius:6px;
+  transition:transform .25s cubic-bezier(.22,1,.36,1), box-shadow .25s, background .25s;
+  display:inline-flex;align-items:center;gap:10px;
+}
+.btn-primary{background:var(--amber);color:#1a1208;font-weight:500}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 12px 32px -8px rgba(255,180,84,.45)}
+.btn-ghost{border:1px solid var(--cyan-dim);color:var(--cyan)}
+.btn-ghost:hover{transform:translateY(-3px);background:rgba(95,212,244,.08)}
+@keyframes rise{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}
+.scroll-hint{
+  position:absolute;bottom:34px;left:50%;transform:translateX(-50%);
+  font-family:var(--mono);font-size:11px;letter-spacing:.22em;color:var(--faint);
+  text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:10px;
+  opacity:0;animation:rise 1s ease 1.4s forwards;
+}
+.scroll-hint::after{
+  content:'';width:1px;height:44px;
+  background:linear-gradient(var(--amber), transparent);
+  animation:drip 1.8s ease-in-out infinite;
+}
+@keyframes drip{0%{transform:scaleY(0);transform-origin:top}55%{transform:scaleY(1);transform-origin:top}56%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* ============================================================
+   SECTION SCAFFOLD — drafting labels
+   ============================================================ */
+section{padding:110px 32px;max-width:var(--maxw);margin:0 auto;position:relative}
+.fig{
+  font-family:var(--mono);font-size:12px;letter-spacing:.2em;
+  color:var(--amber);text-transform:uppercase;
+  display:flex;align-items:center;gap:14px;margin-bottom:18px;
+}
+.fig::after{content:'';flex:1;height:1px;background:var(--line)}
+.section-title{
+  font-family:var(--display);font-weight:700;
+  font-size:clamp(30px,4.4vw,52px);letter-spacing:-.01em;line-height:1.1;
+  margin-bottom:14px;
+}
+.section-sub{color:var(--muted);max-width:560px;font-size:16px}
+
+/* generic reveal */
+.reveal{opacity:0;transform:translateY(34px);transition:opacity .9s cubic-bezier(.22,1,.36,1), transform .9s cubic-bezier(.22,1,.36,1)}
+.reveal.in{opacity:1;transform:none}
+
+/* ============================================================
+   STATS STRIP
+   ============================================================ */
+.stats{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:1px;
+  background:var(--line);border:1px solid var(--line);border-radius:12px;
+  overflow:hidden;margin-top:54px;
+}
+.stat{background:var(--panel);padding:30px 26px;transition:background .3s}
+.stat:hover{background:var(--panel-2)}
+.stat b{
+  font-family:var(--display);font-weight:800;font-size:38px;
+  color:var(--cyan);display:block;line-height:1;
+}
+.stat span{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;color:var(--muted);text-transform:uppercase;display:block;margin-top:10px}
+@media(max-width:860px){.stats{grid-template-columns:repeat(2,1fr)}}
+
+/* ============================================================
+   FLYING TIMELINE  — the signature
+   ============================================================ */
+.timeline-wrap{position:relative;margin-top:70px}
+#tl-svg{
+  position:absolute;top:0;left:0;width:100%;height:100%;
+  pointer-events:none;overflow:visible;z-index:1;
+}
+#tl-path-bg{stroke:var(--line);stroke-width:1.5;fill:none;stroke-dasharray:5 7}
+#tl-path{
+  stroke:url(#tl-grad);stroke-width:2.5;fill:none;
+  filter:drop-shadow(0 0 6px rgba(95,212,244,.55));
+}
+.tl-node{fill:var(--bg);stroke:var(--faint);stroke-width:1.5;transition:all .5s}
+.tl-node.lit{fill:var(--amber);stroke:var(--amber);filter:drop-shadow(0 0 8px rgba(255,180,84,.85));r:6}
+#tl-agent{
+  fill:var(--amber);
+  filter:drop-shadow(0 0 10px rgba(255,180,84,.9)) drop-shadow(0 0 22px rgba(255,180,84,.5));
+}
+#tl-agent-ring{fill:none;stroke:var(--amber);stroke-width:1;opacity:.6}
+.tl-items{position:relative;z-index:2;display:flex;flex-direction:column;gap:96px;padding:40px 0 60px}
+.tl-item{width:calc(50% - 72px);position:relative}
+.tl-item:nth-child(odd){align-self:flex-start}
+.tl-item:nth-child(even){align-self:flex-end}
+/* fly-in */
+.tl-item .tl-card{
+  opacity:0;
+  transition:opacity 1s cubic-bezier(.22,1,.36,1), transform 1s cubic-bezier(.22,1,.36,1);
+  will-change:transform,opacity;
+}
+.tl-item:nth-child(odd) .tl-card{transform:translateX(-110px) translateY(40px) rotate(-2.5deg) scale(.94)}
+.tl-item:nth-child(even) .tl-card{transform:translateX(110px) translateY(40px) rotate(2.5deg) scale(.94)}
+.tl-item.in .tl-card{opacity:1;transform:none}
+.tl-card{
+  background:linear-gradient(160deg, var(--panel-2), var(--panel));
+  border:1px solid var(--line);border-radius:12px;
+  padding:30px 30px 26px;position:relative;
+  transition:border-color .35s, box-shadow .35s;
+}
+.tl-item.in .tl-card:hover{border-color:var(--cyan-dim);box-shadow:0 18px 50px -20px rgba(95,212,244,.25);transform:translateY(-4px)}
+.tl-date{
+  font-family:var(--mono);font-size:12px;letter-spacing:.14em;
+  color:var(--amber);text-transform:uppercase;
+  display:inline-block;padding:5px 12px;border:1px solid var(--amber-dim);
+  border-radius:99px;background:var(--amber-dim);margin-bottom:16px;
+}
+.tl-card h3{font-family:var(--display);font-weight:700;font-size:21px;line-height:1.25;margin-bottom:4px}
+.tl-card h4{font-family:var(--mono);font-size:12.5px;color:var(--cyan);font-weight:400;letter-spacing:.04em;margin-bottom:14px}
+.tl-card p{font-size:14.5px;color:var(--muted)}
+.tl-card ul{list-style:none;margin-top:12px;display:flex;flex-direction:column;gap:8px}
+.tl-card li{font-size:14px;color:var(--muted);padding-left:18px;position:relative}
+.tl-card li::before{content:'›';position:absolute;left:0;color:var(--amber)}
+.tl-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:18px}
+.tag{
+  font-family:var(--mono);font-size:11px;color:var(--cyan);
+  border:1px solid rgba(95,212,244,.22);border-radius:5px;padding:4px 9px;
+  background:rgba(95,212,244,.06);
+}
+@media(max-width:860px){
+  .tl-item{width:calc(100% - 56px);align-self:flex-end !important}
+  .tl-item:nth-child(odd) .tl-card{transform:translateX(90px) translateY(36px) rotate(2deg) scale(.95)}
+  .tl-items{gap:64px}
+}
+
+/* ============================================================
+   PROJECTS
+   ============================================================ */
+.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:26px;margin-top:56px}
+.project{
+  background:var(--panel);border:1px solid var(--line);border-radius:14px;
+  padding:34px;position:relative;overflow:hidden;
+  transition:transform .4s cubic-bezier(.22,1,.36,1), border-color .4s, box-shadow .4s;
+}
+.project::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg, var(--cyan), var(--amber));
+  transform:scaleX(0);transform-origin:left;transition:transform .5s cubic-bezier(.22,1,.36,1);
+}
+.project:hover{transform:translateY(-6px);border-color:var(--cyan-dim);box-shadow:0 24px 60px -24px rgba(7,19,32,.9)}
+.project:hover::before{transform:scaleX(1)}
+.project-id{font-family:var(--mono);font-size:11px;color:var(--faint);letter-spacing:.16em;text-transform:uppercase;margin-bottom:18px;display:flex;justify-content:space-between}
+.project-id em{font-style:normal;color:var(--amber)}
+.project h3{font-family:var(--display);font-weight:700;font-size:24px;margin-bottom:10px}
+.project p{font-size:14.5px;color:var(--muted)}
+.project ul{list-style:none;margin-top:14px;display:flex;flex-direction:column;gap:8px}
+.project li{font-size:13.5px;color:var(--muted);padding-left:18px;position:relative}
+.project li::before{content:'›';position:absolute;left:0;color:var(--cyan)}
+@media(max-width:860px){.projects{grid-template-columns:1fr}}
+
+/* ============================================================
+   SKILLS
+   ============================================================ */
+.skills-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px;margin-top:56px}
+.skill-group{
+  border:1px solid var(--line);border-radius:14px;padding:30px;
+  background:linear-gradient(180deg, var(--panel), transparent);
+}
+.skill-group h3{
+  font-family:var(--mono);font-size:12.5px;letter-spacing:.16em;color:var(--amber);
+  text-transform:uppercase;font-weight:500;margin-bottom:20px;
+  display:flex;align-items:center;gap:12px;
+}
+.skill-group h3::after{content:'';flex:1;height:1px;background:var(--line)}
+.chips{display:flex;flex-wrap:wrap;gap:9px}
+.chip{
+  font-family:var(--mono);font-size:12.5px;color:var(--text);
+  border:1px solid var(--line);border-radius:7px;padding:7px 13px;
+  background:var(--panel-2);
+  transition:border-color .25s, color .25s, transform .25s;
+}
+.chip:hover{border-color:var(--cyan);color:var(--cyan);transform:translateY(-2px)}
+@media(max-width:860px){.skills-grid{grid-template-columns:1fr}}
+
+/* ============================================================
+   EDUCATION & CERTS
+   ============================================================ */
+.edu-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:26px;margin-top:56px}
+.edu-card{border:1px solid var(--line);border-radius:14px;padding:32px;background:var(--panel)}
+.edu-card h3{font-family:var(--display);font-size:20px;font-weight:700;margin-bottom:6px}
+.edu-card .mono{font-family:var(--mono);font-size:12.5px;color:var(--cyan)}
+.edu-card p{color:var(--muted);font-size:14.5px;margin-top:10px}
+.cert-list{list-style:none;display:flex;flex-direction:column;gap:13px;margin-top:6px}
+.cert-list li{
+  display:flex;gap:14px;align-items:baseline;font-size:14.5px;color:var(--muted);
+  padding-bottom:13px;border-bottom:1px dashed var(--line);
+}
+.cert-list li:last-child{border:none;padding-bottom:0}
+.cert-list b{color:var(--text);font-weight:500;white-space:nowrap}
+.cert-badge{font-family:var(--mono);font-size:10.5px;color:var(--amber);border:1px solid var(--amber-dim);border-radius:99px;padding:2px 9px;white-space:nowrap}
+@media(max-width:860px){.edu-grid{grid-template-columns:1fr}}
+
+/* ============================================================
+   CONTACT / FOOTER
+   ============================================================ */
+.contact{text-align:center;padding-bottom:60px}
+.contact .section-title{font-size:clamp(34px,5.5vw,64px)}
+.contact-links{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin-top:40px}
+footer{
+  border-top:1px solid var(--line);padding:26px 32px;
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;
+  font-family:var(--mono);font-size:11.5px;color:var(--faint);letter-spacing:.08em;
+  max-width:var(--maxw);margin:0 auto;
+}
+
+/* ============================================================
+   MOBILE POLISH
+   ============================================================ */
+@media(max-width:720px){
+  body{background-size:42px 42px}
+  nav{padding:14px 20px}
+  .hero{padding:104px 20px 72px}
+  .hero-cta{margin-top:30px}
+  .hero-cta .btn{flex:1 1 auto;justify-content:center;min-width:160px}
+  section{padding:72px 20px}
+  .tl-items{padding-top:24px}
+  .tl-card{padding:24px 20px 22px}
+  .tl-card h3{font-size:19px}
+  .stat{padding:22px 18px}
+  .stat b{font-size:30px}
+  .project{padding:26px 22px}
+  .skill-group,.edu-card{padding:24px 20px}
+  .contact-links .btn{flex:1 1 100%;justify-content:center}
+  footer{justify-content:center;text-align:center}
+}
+@media(max-height:600px){.scroll-hint{display:none}}
+
+/* ============================================================
+   REDUCED MOTION
+   ============================================================ */
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms !important;animation-delay:0s !important;transition-duration:.01ms !important}
+  html{scroll-behavior:auto}
+  .reveal,.tl-item .tl-card{opacity:1 !important;transform:none !important}
+  #tl-agent,#tl-agent-ring{display:none}
+}
+</style>
 </head>
-
 <body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PGZH8HT"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe>
-  </noscript>
-  
-  <!-- Navigation Menu-->
-  <!-- Nav class 1 -->
-  <nav class="hide-on-small-only">
-    <ul class="side-nav fixed section table-of-contents">
 
-      <li class="logo">
-        <a id="logo-container" aria-label="Navigate to the beginning of the page" href="#intro"
-          class="brand-logo grey-blue-text">
-          <img src="./img/pass2.jpeg" class="circle img-responsive profile-pic" alt="avatar">
-        </a>
-      </li>
+<nav>
+  <a class="nav-brand" href="#top">RM<b>.dev</b> <span style="color:var(--faint)">// full-stack × AI</span></a>
+  <div class="nav-links">
+    <a href="#timeline">Timeline</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
 
-      <li class="bold">
-        <a aria-label="Navigate to the About section" href="#about" class="waves-effect waves-dark teal-text"><i
-            class="mdi-social-person small"></i><span>About</span></a>
-      </li>
-      <li class="bold">
-        <a aria-label="Navigate to the Experience section" href="#experience"
-          class="waves-effect waves-dark teal-text"><i
-            class="mdi-action-trending-up small"></i><span>Experience</span></a>
-      </li>
-
-      <li class="bold">
-        <!-- mdi-av-web small
-             mdi-av-my-library-books small-->
-        <a aria-label="Navigate to the Projects section" href="#projects" class="waves-effect waves-dark teal-text"><i
-            class="mdi-av-my-library-books small"></i><span>Projects</span></a>
-      </li>
-
-      <li class="bold">
-        <!--
-        ICONS:
-        mdi-action-assessment
-        mdi-social-poll
-        mdi-av-equalizer
-        -->
-        <a aria-label="Navigate to the Skills section" href="#skills" class="waves-effect waves-dark teal-text"><i
-            class="mdi-action-assessment small"></i><span>Skills</span></a>
-      </li>
-      
-      <li class="bold">
-        <!--
-        ICONS:
-        -->
-        <a aria-label="Navigate to the Education section" href="#education" class="waves-effect waves-dark teal-text"><i
-            class="mdi-social-school small"></i><span>Education</span></a>
-      </li>
-
-      <li class="bold">
-        <!-- 
-        1. mdi-communication-contacts
-        2. mdi-content-mail
-        3. mdi-communication-email
-        -->
-        <a aria-label="Navigate to the Contact section" href="#contact" class="waves-effect waves-dark teal-text"><i
-            class="mdi-content-mail small"></i><span>Contact</span></a>
-      </li>
-
-      <li class="bold">
-        <!--
-        ICONS:
-        1. mdi-action-description
-        2. mdi-file-folder
-        3. mdi-file-folder-open
-        4. mdi-file-attachment
-        5. mdi-file-folder-shared
-        -->
-        <!-- <a aria-label="Open Varad's resume in a new tab" href="#resume" target="_blank"
-          onclick="window.open('https://drive.google.com/file/d/1vYi-bMyIsZPve0x_clxY8xsDtiHiOMd3/view?usp=sharing')"
-          class="waves-effect waves-dark teal-text"><i class="mdi-file-folder-open small"></i><span>Resume</span></a> -->
-        <a aria-label="Open Rishabh's resume in a new tab" href="https://drive.google.com/file/d/1YDWXwH_38W5fJVKA2x-nM_Dk_-YHHrCw/view?usp=sharing" target="_blank"
-        class="waves-effect waves-dark teal-text"><i class="mdi-file-folder-open small"></i><span>Resume</span></a>  
-      </li>
-    </ul>
-  </nav>
-
-  <!-- Nav class 2 -->
-  <nav class="hide-on-large only trigger z-depth-1">
-    <a aria-label="Toggle visibility of the mobile navbar" href="#" data-activates="slide-out"
-      class="button-collapse"><i class="mdi-navigation-menu"></i></a>
-    <div class="name-title">
-      <a id="name" aria-label="Navigate to the beginning of the page" href="#" class="teal-text">Rishabh Mathur</a><span class="black-text">Software Developer</span>
+<!-- ================= HERO ================= -->
+<header class="hero" id="top">
+  <canvas id="constellation" aria-hidden="true"></canvas>
+  <div class="hero-inner">
+    <div class="hero-eyebrow">PMP® Certified · Pune, India</div>
+    <h1>Rishabh Mathur<span class="stroke">builds AI systems</span></h1>
+    <div class="hero-stream">
+      <span class="stream-ghost" aria-hidden="true">Full Stack Developer &amp; AI Engineer — 2+ years owning full SDLC delivery. Business Owner of AURA, an AI-powered SaaS live across 6 hotels, and builder of the Grevon concierge widget streaming responses over hand-rolled gRPC-web. I take products from architecture to deployment — then teach them to think.</span>
+      <span class="stream-live"><span id="stream-text"></span><span class="cursor" id="stream-cursor"></span></span>
     </div>
-  </nav>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#timeline">Follow the timeline ↓</a>
+      <a class="btn btn-ghost" href="https://linkedin.com/in/rishabh-mathur-087820212" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </div>
+  </div>
+  <div class="scroll-hint">Scroll</div>
+</header>
 
-  <!-- Nav class 3 -->
-  <nav class="hide-on-large only">
-    <ul id="slide-out" class="side-nav">
-      <li class="bold">
-        <a aria-label="Navigate to the About section" href="#about" class="waves-effect waves-dark teal-text"><i
-            class="mdi-social-person small"></i><span>About</span></a>
-      </li>
-      <li class="bold">
-        <a aria-label="Navigate to the Experience section" href="#experience"
-          class="waves-effect waves-dark teal-text"><i
-            class="mdi-action-trending-up small"></i><span>Experience</span></a>
-      </li>
-      <li class="bold">
-        <a aria-label="Navigate to the Projects section" href="#projects" class="waves-effect waves-dark teal-text"><i
-            class="mdi-av-my-library-books small"></i><span>Projects</span></a>
-      </li>
-      <li class="bold">
-        <a aria-label="Navigate to the Skills section" href="#skills" class="waves-effect waves-dark teal-text"><i
-            class="mdi-action-assessment small"></i><span>Skills</span></a>
-      </li>
+<!-- ================= STATS ================= -->
+<section>
+  <div class="fig reveal">Fig. 01 — At a glance</div>
+  <h2 class="section-title reveal">From hotel lobbies<br>to LangGraph nodes.</h2>
+  <p class="section-sub reveal">Full Stack Developer & AI Engineer with 2+ years owning end-to-end SDLC — shipping Angular, Node.js and FastAPI products, then wiring LLMs, RAG pipelines and multi-agent systems into them.</p>
+  <div class="stats reveal">
+    <div class="stat"><b data-count="6">0</b><span>Hotels running AURA in production</span></div>
+    <div class="stat"><b data-count="31">0</b><span>K lines of code — Grevon widget</span></div>
+    <div class="stat"><b data-count="40">0</b><span>% manual coordination reduced via GenAI</span></div>
+    <div class="stat"><b data-count="3">0</b><span>Live platforms embedding Grevon</span></div>
+  </div>
+</section>
 
-      <li class="bold">
-        <a aria-label="Navigate to the Education section" href="#education" class="waves-effect waves-dark teal-text"><i
-            class="mdi-social-school small"></i><span>Education</span></a>
-      </li>
-      <li class="bold">
-        <a aria-label="Navigate to the Contact section" href="#contact" class="waves-effect waves-dark teal-text"><i
-            class="mdi-content-mail small"></i><span>Contact</span></a>
-      </li>
-      <li class="bold">
-        <a aria-label="Open Varad's Resume in a new tab"
-          href="https://drive.google.com/file/d/1B6MZ1z0-7NsefC3Lm_q-uhib28MTqpE9/view?usp=sharing" target="_blank"
-          class="waves-effect waves-dark teal-text"><i class="mdi-file-folder-open small"></i><span>Resume</span></a>
-      </li>
-    </ul>
-  </nav>
+<!-- ================= FLYING TIMELINE ================= -->
+<section id="timeline">
+  <div class="fig reveal">Fig. 02 — Career path · agent in transit</div>
+  <h2 class="section-title reveal">The timeline.</h2>
+  <p class="section-sub reveal">Scroll, and the route draws itself — an agent travels the graph, lighting up each node it reaches.</p>
 
-  <!-- Main Content-->
-  <main>
-    <!-- First Section: Heading lines and image -->
-    <section id="intro" class="section scrollspy full-height">
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="col-md-9">
-          <div class="content section-padding valign" style="margin-left: 10%; margin-top: 50px;">
-            <div class="caption">
-              <h2>Hi, I'm <span class="na"><i>Rishabh Mathur.</i></span></h2>
-              <h5 style="color:rgb(0, 0, 0)">A <span class="typing" style="font-weight: 300; color:#004d40"></span></h5>
-              <!-- <h5 style="color:#00796b">A <span class="typing" style="font-weight: 300; color:#fff"></span></h5> -->
-              <h5><span class="ro">currently looking forward for opportunities which can help me to enhance my knowledge in my domain and learn new things everyday.</span></h5>
-            </div>
-            <div class="social">
-              <a href="http://linkedin.com/in/rishabh-mathur-087820212/" target="_blank">
-                <button class="icon-btn linkedin">
-                  <i class="fa fa-linkedin"></i>
-                </button>
-              </a>
-              <a href="https://github.com/RishabhMathur-2404" target="_blank">
-                <button class="icon-btn github">
-                  <i class="fa fa-github"></i>
-                </button>
-              </a>
-            </div>
-            <div class='buttons'>
-              <a href="#about" class="readme">Read More</a>
-              <a href="#contact" class="contactme">Contact Me</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+  <div class="timeline-wrap" id="tl-wrap">
+    <svg id="tl-svg" aria-hidden="true">
+      <defs>
+        <linearGradient id="tl-grad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#5FD4F4"/>
+          <stop offset="1" stop-color="#FFB454"/>
+        </linearGradient>
+      </defs>
+      <path id="tl-path-bg" d=""/>
+      <path id="tl-path" d=""/>
+      <g id="tl-nodes"></g>
+      <circle id="tl-agent-ring" r="11" cx="-100" cy="-100"/>
+      <circle id="tl-agent" r="5" cx="-100" cy="-100"/>
+    </svg>
 
-    <!-- Second Section: About -->
-    <section id="about" class="section scrollspy">
-      <h3 class="page-title white-text teal">About</h3>
-      <div class="container flow-text">
-        <!-- <blockquote>
-          <h2>
-            A Software Developer with a passion for Backend Development and Artificial Intelligence.
-          </h2>
-        </blockquote> -->        
-        <p>
-          I am a Computer Science Under Grad Student at VIT Bhopal University. I enjoy problem-solving and coding. Always strive to bring 100% to the work I do.
+    <div class="tl-items">
 
-          I have worked on technologies like MySQL, Firebase, HTML5, CSS, Java, C++, React.js, Angular during my bachelor's.
-
-          I am passionate about developing complex applications that solve real-world problems impacting millions of users.
-        </p>
-        <p>
+      <article class="tl-item">
+        <div class="tl-card">
+          <span class="tl-date">Dec 2023 — Jul 2024</span>
+          <h3>MEAN Stack Developer</h3>
+          <h4>Upswing Cognitive Hospitality Solutions · Pune</h4>
           <ul>
-            <li><b>Languages:</b> Python, Java, JavaScript, C++, HTML/CSS, Typescript</li>
-            <li><b>Databases:</b> MySQL, Firebase</li>
-            <li><b>Libraries:</b> NumPy, Machine Learning</li>
-            <li><b>Frameworks:</b> React.js, Ionic, Node.js, Bootstrap, Apache Bean</li>
-            <li><b>Tools & Technologies:</b> Git, Fast API, Anaconda, Jupyter Notebook</li>
+            <li>Built Angular & Ionic apps for hospitality clients in Dubai with real-time REST API data rendering.</li>
+            <li>Developed Node.js/Express services on MongoDB; shaped schema design and query optimisation.</li>
+            <li>Worked in agile sprints across design, QA and product teams.</li>
           </ul>
-          
-        </p>
-          
-        <!-- <p>
-          
-          Detail-oriented Software Developer with professional experience in Backend Development, Machine Learning, Computer Vision. I am adept in Python, Django, Flask, SQL, Machine Learning, Computer Vision.           
-        </p> -->
-        <p>
-          Looking for an opportunity to work in a challenging position combining my skills in Software Engineering, which provides professional development, interesting experiences and personal growth.
-        </p>
-      
-      </div>
-    </section>
-
-
-    <!-- Third Section: Experience -->
-    <section id="experience" class="section scrollspy">
-      <h3 class="page-title white-text teal">Experience</h3>
-      <div class="container">
-
-        <!-- Latest Experience -->
-        <div class="card">
-          <div class="card-content">
-            <div class="row">
-              <div class="col s12 m2">
-                <!--<a href="https://www.zhiffy.com/" target="_blank"><img alt="Zhiffy logo" 
-                    src="/img/exp-zhiffy-logo-1.webp" class="responsive-img center-block" /></a>-->
-              </div>
-              <!-- <div class="col s12 m10"> -->
-              <div class="col s12 m10">
-                <p>
-                  <span class="card-title"><a target="_blank"
-                      class="teal-text hoverline">Upswing</a></span>
-                </p>
-              </div>
-            </div>
-            <div class="role brown-text text-darken-2">Software Engineer</div>
-            <ul>
-              <li>
-                Developed a hybrid mobile applications using Ionic framework and Angular.
-              </li>
-              <li>
-                Designed and developed interactive user interfaces using Ionic's pre-built components and
-                custom styles
-              </li>
-              <li>Conducted testing and debugging of mobile applications on various platforms including iOS and
-                Android devices</li>
-              <li>Utilised Firebase real-time database and cloud functions to manage and store application data.</li>
-              <li>
-                Implemented user authentication and authorisation using Firebase authentication services.</li>
-                <b>Tools:</b> Typescript, Angular, Firebase
-              </li>
-            </ul>
-          </div>
-          <div class="card-action">
-            <span>Dec 22 – Feb 23 | Pune, India</span>
-          </div>
+          <div class="tl-tags"><span class="tag">Angular</span><span class="tag">Ionic</span><span class="tag">Node.js</span><span class="tag">MongoDB</span></div>
         </div>
-    </section>
+      </article>
 
-    <!-- Fourth Section: Projects -->
-    <section id="projects" class="section scrollspy">
-      <h3 class="page-title white-text teal">Projects</h3>
-      <div class="container">
-        <div class="row">
-
-         
-         
-
-          <div class="col s12 m6 l4">
-            <div class="card medium">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img alt="quiz app" src="./img/table-data.png" style="height: 100%; width: 100%" class="activator" />
-              </div>
-              <div class="card-content">
-                <span class="card-title activator teal-text hoverline">Tabula<i
-                    class="mdi-navigation-more-vert right"></i></span>
-                <p>
-                  Enhanced User Engagement with ReactJS and Firebase
-                </p>
-              </div>
-              <div class="card-reveal">
-                <!-- TODO: change this -- only close button -->
-                <!-- <span class="card-title brown-text">Accomplishments<i class="mdi-navigation-close right"></i></span> -->
-                <span class="card-title grey-text"><small>Accomplishments</small><i
-                    class="mdi-navigation-close right"></i></span>
-                <ul>
-                  <li><b>Tools:</b>React.js, Firebase</li>
-                  <li>Developed an interactive ReactJS and Firebase web app, boosting user engagement.</li>
-                  <li>Enabled dual form data entry, unified data display, and streamlined CRUD operations, while enhancing system scalability and performance.</li>
-
-                </ul>
-                <div class="card-action">
-                  <!-- <a aria-label="Visit " href="https://rishabhmathur-2404.github.io/Vitafit/" target="_blank" data-position="top"
-                    data-tooltip="View Online"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-external-link"></i></a> -->
-                  <a aria-label="Visit the GitHub repo for  project" href="https://github.com/RishabhMathur-2404"
-                    target="_blank" data-position="top" data-tooltip="View Source"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-github"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col s12 m6 l4">
-            <div class="card medium">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img alt="quiz app" src="./img/project-quizup-logo-1.png" style="height: 100%; width: 100%" class="activator" />
-              </div>
-              <div class="card-content">
-                <span class="card-title activator teal-text hoverline">Doctors Appointment Website<i
-                    class="mdi-navigation-more-vert right"></i></span>
-                <p>
-                    Appointment scheduling system for easy booking and cancellations.
-                </p>
-              </div>
-              <div class="card-reveal">
-                <!-- TODO: change this -- only close button -->
-                <!-- <span class="card-title brown-text">Accomplishments<i class="mdi-navigation-close right"></i></span> -->
-                <span class="card-title grey-text"><small>Accomplishments</small><i
-                    class="mdi-navigation-close right"></i></span>
-                <ul>
-                  <li><b>Tools:</b>HTML, CSS, Bootstrap, Firebase</li>
-                  <li>User-friendly interface for easy navigation.</li>
-                  <li>Responsive design for optimal mobile viewing</li>
-
-                </ul>
-                <div class="card-action">
-                  <a aria-label="Visit " href="https://rishabhmathur-2404.github.io/Vitafit/" target="_blank" data-position="top"
-                    data-tooltip="View Online"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-external-link"></i></a>
-                  <a aria-label="Visit the GitHub repo for  project" href="https://github.com/RishabhMathur-2404"
-                    target="_blank" data-position="top" data-tooltip="View Source"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-github"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          
-
-          <!-- Flask Project -->
-          <!--<div class="col s12 m6 l4">
-            <div class="card medium">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img alt="Screenshot of web app" src="/img/project-blog-logo.jpg"
-                style="height: 100%; width: 100%" class="activator" />
-              </div>
-              <div class="card-content">
-                <span class="card-title activator teal-text hoverline">Blog Web-App<i
-                    class="mdi-navigation-more-vert right"></i></span>
-                <p>
-                  A simple and extensible blog web-app based on Flask.
-                </p>
-              </div>
-              <div class="card-reveal">
-                <!-- TODO: change this -- only close button -->
-                <!-- <span class="card-title brown-text">Accomplishments<i class="mdi-navigation-close right"></i></span> 
-                <span class="card-title teal-text"><small>Accomplishments</small><i
-                    class="mdi-navigation-close right"></i></span>
-                <ul>
-                  <li><b>Tools:</b> HTML, CSS, Bootstrap, Flask, SQLAlchemy, Postgresql, Python</li>
-                  <li>Users can view posts and contact the admin via Contact Page.</li>
-                  <li>Admin can Add, Delete, Update posts.</li>
-                </ul>
-                <div class="card-action">
-                  <a aria-label="Visit Blog website" href="https://flask-heroku-blog.herokuapp.com/" target="_blank" data-position="top"
-                    data-tooltip="View Online"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-external-link"></i></a>
-                  <a aria-label="Visit the GitHub repo for  project" href="https://github.com/varadbhogayata/flask-blog"
-                    target="_blank" data-position="top" data-tooltip="View Source"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-github"></i></a>
-                </div>
-              </div>
-            </div>
-          </div> -->
-
-          <!-- VQA -->
-          <!-- <div class="col s12 m6 l4">
-            <div class="card medium">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img alt="Screenshot of  web app" src="/img/project-aim_bert-bias.png" style="height: 100%; width: 100%" class="activator" />
-              </div>
-              <div class="card-content">
-                <span class="card-title activator teal-text hoverline"><i
-                    class="mdi-navigation-more-vert right"></i></span>
-                <p>
-                  An attention-based classification model that aims at generating an answer for a given input image.
-                </p>
-              </div>
-              <div class="card-reveal">
-                TODO: change this -- only close button 
-                 <span class="card-title brown-text">Accomplishments<i class="mdi-navigation-close right"></i></span> 
-                <span class="card-title teal-text"><small>Accomplishments</small><i
-                    class="mdi-navigation-close right"></i></span>
-                <ul>
-                  <li>Incorporated Convolution Neural Networks (CNN) for extracting image features and Long Short Term
-                    Memory for extracting question
-                    embeddings.</li>
-                  <li>Tested the model on the COCO dataset, abstract scenes images, and got 69% overall accuracy on the
-                    VQA evaluation metric.</li>
-
-                </ul>
-                <div class="card-action">
-                  <a aria-label="Visit the GitHub repo for  project"
-                    href="https://github.com/varadbhogayata/visual-question-answering" target="_blank"
-                    data-position="top" data-tooltip="View Source"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-github"></i></a>
-                </div>
-              </div>
-            </div>
-          </div> -->
-
-          <!-- Video Summarizer -->
-          <div class="col s12 m6 l4">
-            <div class="card medium">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img alt="Screenshot of  web app" src="./img/computer-vision-v2-04.png" style="height: 100%; width: 100%" class="activator" />
-              </div>
-              <div class="card-content">
-                <span class="card-title activator teal-text hoverline">Text Summarizer<i
-                    class="mdi-navigation-more-vert right"></i></span>
-                <p>
-                  An NLP based project that generates a short summary of the given input text.
-                </p>
-              </div>
-              <div class="card-reveal">
-                <!-- TODO: change this -- only close button -->
-                <!-- <span class="card-title brown-text">Accomplishments<i class="mdi-navigation-close right"></i></span> -->
-                <span class="card-title brown-text"><small>Accomplishments</small><i
-                    class="mdi-navigation-close right"></i></span>
-                <ul>
-                  <li>Ensured scalability, performance, and robustness of the deployed system.</li>
-                  <li>Created a dataset of articles and documents for training and evaluation.
-                    - Implemented CI/CD pipelines for seamless updates and maintenance.</li>
-                  <!-- <li>Deployed the text summarization system as a web application or API.</li> -->
-
-                </ul>
-                <!-- TODO: UPLOAD THIS PROJECT ON GITHUB -->
-                <div class="card-action">
-                  <a aria-label="Visit the GitHub repo for  project" href="https://github.com/RishabhMathur-2404"
-                    target="_blank" data-position="top" data-tooltip="View Source"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-github"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          
-
-          <!-- Head Counting System -->
-          <div class="col s12 m6 l4">
-            <div class="card medium">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img alt="Screenshot of  web app" src="./img/Blog-Images-Forget-Machine-Learning-Humans-Still-Have-a-Lot-to-Learn-Part-II.jpg" style="height: 100%; width: 100%" class="activator" />
-              </div>
-              <div class="card-content">
-                <span class="card-title activator teal-text hoverline">Backgroung Noise Cancellations<i
-                    class="mdi-navigation-more-vert right"></i></span>
-                <p>
-                    Developed a background noise cancellation project using Python
-                </p>
-              </div>
-              <div class="card-reveal">
-                <!-- TODO: change this -- only close button -->
-                <!-- <span class="card-title brown-text">Accomplishments<i class="mdi-navigation-close right"></i></span> -->
-                <span class="card-title brown-text"><small>Accomplishments</small><i
-                    class="mdi-navigation-close right"></i></span>
-                <ul>
-                  <li>Utilized audio processing techniques to remove unwanted noise from audio recordings</li>
-                  <li>Optimized the algorithm for real-time processing to enable seamless noise cancellation during audio playback</li>
-
-                </ul>
-                <div class="card-action">
-                  <a aria-label="Visit the GitHub repo for  project"
-                    href="https://github.com/RishabhMathur-2404" target="_blank"
-                    data-position="top" data-tooltip="View Source"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-github"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- ************* -->
+      <article class="tl-item">
+        <div class="tl-card">
+          <span class="tl-date">Jul 2024 — Present</span>
+          <h3>Full Stack Developer</h3>
+          <h4>Upswing Cognitive Hospitality Solutions · Pune</h4>
+          <ul>
+            <li>Own full SDLC across Angular v18–v21 frontends, Node.js/gRPC backends and MongoDB for a real-time hotel-ops SaaS.</li>
+            <li>Integrated Gemini GenAI into the task-allocation engine — cutting manual coordination by ~40%.</li>
+            <li>Scaled RESTful + gRPC microservices across 6 enterprise hotel deployments; led code reviews, CI/CD and Docker rollouts.</li>
+          </ul>
+          <div class="tl-tags"><span class="tag">Angular v18–21</span><span class="tag">gRPC</span><span class="tag">Gemini API</span><span class="tag">Docker</span></div>
         </div>
-      </div>
-    </section>
+      </article>
 
-    <!-- Fifth Section: Skills -->
-    <section id="skills" class="section scrollspy">
-      <h3 class="page-title white-text teal">Skills</h3>
-      <div class="container">
-        <!-- Languages and Databases -->
-        <div class="card">
-          <div class="card-content">
-            <h4 class="brown-text light">Languages</h4>
-            <div class="row text-center">
-              <div class="col s4 m2">
-                
-                <img alt="" src="./img/python-logo-1-300x300.jpg" class="responsive-img" />Python
-              </div>
-              <div class="col s4 m2">
-                <img alt="" src="./img/java.png" class="responsive-img" />Java
-              </div>
-              <div class="col s4 m2">
-                <img alt="" src="./img/c++.png" class="responsive-img" />C++
-              </div>
-              <div class="col s4 m2">
-                <img alt="" src="./img/html5-300x300.jpg" class="responsive-img" />HTML5
-              </div>
-              <div class="col s4 m2">
-                <img alt="" src="./img/css3-300x300.jpg" class="responsive-img" />CSS3
-              </div>
-            </div>
-          </div>
+      <article class="tl-item">
+        <div class="tl-card">
+          <span class="tl-date">Product · Business Owner</span>
+          <h3>AURA — Housekeeping Management Platform</h3>
+          <h4>Angular · Ionic · Node.js · gRPC · MongoDB · Gemini · AWS S3</h4>
+          <ul>
+            <li>Architected the full-stack hotel-operations SaaS deployed at 6 hotels across UAE and India.</li>
+            <li>Gemini-powered automated task routing improved operational efficiency by ~40%.</li>
+            <li>Owned architecture, Jest coverage, Docker deployment, client demos and investor presentations.</li>
+          </ul>
+          <div class="tl-tags"><span class="tag">SaaS</span><span class="tag">GenAI routing</span><span class="tag">6 hotels</span></div>
         </div>
+      </article>
 
-        <div class="card">
-          <div class="card-content">
-            <h4 class="brown-text light">Libraries and Databases</h4>
-            <div class="row text-center">
-              <!-- <div class="col s4 m2">
-                <img alt="" src="/img/numpy-logo-1-500x500.jpg" class="responsive-img" />NumPy
-              </div> -->
-              <div class="col s4 m2">
-                <img alt="" src="./img/mysql-logo-1-300x300.jpg" class="responsive-img" />MySQL
-              </div>
-              <div class="col s4 m2">
-                <img alt="" src="./img/firebase.png" class="responsive-img" />Firebase
-              </div>
-            </div>
-          </div>
+      <article class="tl-item">
+        <div class="tl-card">
+          <span class="tl-date">Product · Frontend Owner</span>
+          <h3>Grevon — AI Hospitality Chat Widget</h3>
+          <h4>StencilJS · TypeScript · gRPC-web · Firebase · Mapbox · Stripe</h4>
+          <ul>
+            <li>White-label AI hotel concierge — ~31K LoC, 29+ components — live on Kynect, Grevon and Upswing.</li>
+            <li>Custom gRPC-web client with binary protobuf serialization for real-time AI streaming, zero third-party libs.</li>
+            <li>Full booking engine: Mapbox GL maps, multi-room cart, Stripe checkout; multi-tenant via runtime Firestore config.</li>
+          </ul>
+          <div class="tl-tags"><span class="tag">Web Components</span><span class="tag">gRPC-web</span><span class="tag">Multi-tenant</span></div>
         </div>
+      </article>
 
-        <!-- Frameworks -->
-        <div class="card">
-          <div class="card-content">
-            <h4 class="brown-text light">Frameworks</h4>
-            <div class="row text-center">
-        
-              <div class="col s4 m2">
-                <img alt="" src="./img/ionic.png" class="responsive-img" />Ionic
-              </div>
-              <div class="col s4 m2">
-                <img alt="" src="./img/bootstrap.png" class="responsive-img" />Bootstrap
-              </div>
-            </div>
-          </div>
+      <article class="tl-item">
+        <div class="tl-card">
+          <span class="tl-date">AI Engineering · Ongoing</span>
+          <h3>LLM Backends, RAG & Multi-Agent Systems</h3>
+          <h4>Python · FastAPI · LangChain · LangGraph · LangSmith · ChromaDB</h4>
+          <ul>
+            <li>Async FastAPI backends over OpenAI, Anthropic and Groq — streaming, memory, RAG grounding for near-zero hallucination.</li>
+            <li>End-to-end RAG with LangChain LCEL, ChromaDB and HuggingFace embeddings + contextual compression retrieval.</li>
+            <li>Multi-agent LangGraph systems — supervisor, map-reduce, subgraphs, time travel — observed end-to-end in LangSmith.</li>
+          </ul>
+          <div class="tl-tags"><span class="tag">RAG</span><span class="tag">Multi-agent</span><span class="tag">LLM-as-judge</span></div>
         </div>
+      </article>
 
-        <!-- Other -->
-        <div class="card">
-          <div class="card-content">
-            <h4 class="brown-text light">Other</h4>
-            <div class="row text-center">
+    </div>
+  </div>
+</section>
 
+<!-- ================= PROJECTS ================= -->
+<section id="projects">
+  <div class="fig reveal">Fig. 03 — Selected builds</div>
+  <h2 class="section-title reveal">Things shipped.</h2>
+  <div class="projects">
+    <article class="project reveal">
+      <div class="project-id"><span>PRJ-01 · SaaS</span><em>6 hotels · live</em></div>
+      <h3>AURA</h3>
+      <p>Hotel housekeeping & operations platform: Angular dashboard, Ionic mobile app, Node.js/gRPC APIs and a Gemini-driven task router.</p>
+      <ul>
+        <li>~40% efficiency gain from AI task allocation</li>
+        <li>Media pipeline on AWS S3</li>
+        <li>Full ownership: code → demos → investor decks</li>
+      </ul>
+    </article>
+    <article class="project reveal">
+      <div class="project-id"><span>PRJ-02 · Widget</span><em>3 platforms · live</em></div>
+      <h3>Grevon</h3>
+      <p>Embeddable AI hotel concierge as a plug-and-play Web Component — booking engine, maps, payments and streamed AI replies.</p>
+      <ul>
+        <li>~31K LoC, 29+ StencilJS components</li>
+        <li>Hand-built gRPC-web client (binary protobuf)</li>
+        <li>Single codebase, runtime multi-tenant config</li>
+      </ul>
+    </article>
+    <article class="project reveal">
+      <div class="project-id"><span>PRJ-03 · AI infra</span><em>open source</em></div>
+      <h3>Agent & RAG Lab</h3>
+      <p>Production-pattern FastAPI LLM backends with RAG pipelines and multi-agent orchestration, fully traced in LangSmith.</p>
+      <ul>
+        <li>LangGraph supervisor & map-reduce patterns</li>
+        <li>ChromaDB + HuggingFace embeddings</li>
+        <li>LLM-as-judge evals, prompt versioning, A/B tests</li>
+      </ul>
+    </article>
+    <article class="project reveal">
+      <div class="project-id"><span>PRJ-04 · IoT</span><em>GRMS</em></div>
+      <h3>NOVA</h3>
+      <p>Contactless guest-room management: IoT hardware wired to an Angular dashboard and Node.js backend for real-time room automation.</p>
+      <ul>
+        <li>Live device monitoring & control</li>
+        <li>REST API integration layer</li>
+      </ul>
+    </article>
+  </div>
+</section>
 
-              <div class="col s4 m2">
-                <img alt="" src="./img/git.png" class="responsive-img" />Git
-              </div>
-              <div class="col s4 m2">
-                <img alt="" src="./img/fastapi.png" class="responsive-img" />Fastapi
-              </div>
-              <div class="col s4 m2">
-                <img alt="" src="./img/Jupyter Notebook.png" class="responsive-img" />Jupyter Notebook
-              </div>
-              <div class="col s4 m2">
-                <img alt="" src="./img/Anaconda.png" class="responsive-img" />Anaconda
-              </div>
-            </div>
-          </div>
-        </div>
+<!-- ================= SKILLS ================= -->
+<section id="skills">
+  <div class="fig reveal">Fig. 04 — Toolbox</div>
+  <h2 class="section-title reveal">The stack.</h2>
+  <div class="skills-grid">
+    <div class="skill-group reveal">
+      <h3>Frontend</h3>
+      <div class="chips"><span class="chip">Angular v18–v21</span><span class="chip">React</span><span class="chip">Ionic</span><span class="chip">TypeScript</span><span class="chip">StencilJS</span><span class="chip">Web Components</span><span class="chip">Tailwind CSS</span><span class="chip">SCSS</span></div>
+    </div>
+    <div class="skill-group reveal">
+      <h3>Backend & Data</h3>
+      <div class="chips"><span class="chip">Node.js</span><span class="chip">Express</span><span class="chip">Python</span><span class="chip">FastAPI (async)</span><span class="chip">gRPC / gRPC-web</span><span class="chip">GraphQL</span><span class="chip">MongoDB</span><span class="chip">Firebase</span><span class="chip">MySQL</span><span class="chip">ChromaDB</span></div>
+    </div>
+    <div class="skill-group reveal">
+      <h3>AI & GenAI</h3>
+      <div class="chips"><span class="chip">OpenAI · Anthropic · Groq · Gemini</span><span class="chip">LangChain (LCEL)</span><span class="chip">LangGraph</span><span class="chip">LangSmith</span><span class="chip">RAG pipelines</span><span class="chip">Multi-agent systems</span><span class="chip">ReAct agents</span><span class="chip">Embeddings</span><span class="chip">Prompt engineering</span></div>
+    </div>
+    <div class="skill-group reveal">
+      <h3>Quality & Ops</h3>
+      <div class="chips"><span class="chip">Jest</span><span class="chip">Jasmine</span><span class="chip">Git / GitHub</span><span class="chip">CI/CD</span><span class="chip">Docker</span><span class="chip">AWS</span><span class="chip">Agile / Scrum</span><span class="chip">Jira</span><span class="chip">PMP®</span></div>
+    </div>
+  </div>
+</section>
 
-        <!-- certifications -->
-        <!-- <div class="card">
-          <div class="card-content">
-            <h4 class="brown-text light">Certificates</h4>
-            <div class="row text-left">
-              <div class="container">
-                <div class="row">
-                  <div class="col s12 m6 l6">
-                    <div class="card">
-                      <div class="card-image">
-                        <img src="/assets/img/mooc-machine-learning-coursera-800x500.jpg">
-                      </div>
-                      <div class="card-content">
-                        <span class="card-title teal-text">Machine Learning (Stanford)</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col s12 m6 l6">
-                    <div class="card">
-                      <div class="card-image">
-                        <img src="/assets/img/mooc-algorithms-stanford-2-800x500.jpg">
-                      </div>
-                      <div class="card-content">
-                        <span class="card-title teal-text">Algorithms (Stanford)</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> -->
+<!-- ================= EDUCATION ================= -->
+<section id="education">
+  <div class="fig reveal">Fig. 05 — Credentials</div>
+  <h2 class="section-title reveal">Education & certifications.</h2>
+  <div class="edu-grid">
+    <div class="edu-card reveal">
+      <h3>B.Tech — Computer Science & Engineering</h3>
+      <div class="mono">Vellore Institute of Technology, Bhopal</div>
+      <p>2020 – 2024 · CGPA 3.23 / 4.00</p>
+    </div>
+    <div class="edu-card reveal">
+      <ul class="cert-list">
+        <li><span class="cert-badge">PMP®</span><span><b>Project Management Professional</b> — Coursera (Pearson): Agile, risk, stakeholder & resource management</span></li>
+        <li><span class="cert-badge">LC</span><span><b>LangChain Essentials</b> + Foundation — agents, tools, streaming, HITL, async chains, RAG, loaders</span></li>
+        <li><span class="cert-badge">LG</span><span><b>LangGraph Essentials</b> + Foundation — state, checkpointers, interrupts, subgraphs, map-reduce, time travel</span></li>
+        <li><span class="cert-badge">LS</span><span><b>LangSmith Essentials</b> + Fleet — tracing, evaluation, prompt hub, A/B testing, agent versioning</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-      </div>
-    </section>
+<!-- ================= CONTACT ================= -->
+<section class="contact" id="contact">
+  <div class="fig reveal" style="justify-content:center">Fig. 06 — Open channel</div>
+  <h2 class="section-title reveal">Let's build something<br>that ships.</h2>
+  <p class="section-sub reveal" style="margin:0 auto">Open to full-stack and AI engineering roles, collaborations, and interesting agent problems.</p>
+  <div class="contact-links reveal">
+    <a class="btn btn-primary" href="mailto:rishabhmathur2404@gmail.com">rishabhmathur2404@gmail.com</a>
+    <a class="btn btn-ghost" href="tel:+918085634881">+91 80856 34881</a>
+    <a class="btn btn-ghost" href="https://linkedin.com/in/rishabh-mathur-087820212" target="_blank" rel="noopener">LinkedIn ↗</a>
+  </div>
+</section>
 
-    <!-- Seventh Section: Education -->
-    <section id="education" class="section scrollspy">
-      <h3 class="page-title white-text teal">Education</h3>
-      <div class="container">
-        <div class="row">
-          <!-- Education -->
-          <!--<div class="col s12 m6 l6">
-            <div class="card">
-              <div class="card-content">
-                <p>
-                  <span class="card-title"><a href="" target="_blank" class="teal-text hoverline">Certification</a></span>
-                </p>
-                <p class="brown-text">Tempe, USA</p>
-                <p>
-                  <b>Degree: </b>Master of Science in Computer Science      
-                  <br>
-                  <b>CGPA: </b>4.0/4.0
-                </p>
+<footer>
+  <span>© 2026 Rishabh Mathur · Pune, IN</span>
+  <span>Full Stack Developer &amp; AI Engineer</span>
+</footer>
 
-                <ul>
-                  <p>
-                    <b>Relevant Courseworks:</b>
-                  <ul>
-                    <li>Distributed Database Systems</li>
-                    <li>Cloud Computing</li>
-                    <li>Foundations of Algorithms</li>                    
-                  </ul>
-                  </p>
+<script>
+(function(){
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-                </ul>
-              </div>
-            </div> -->
+  /* ---------- hero: LLM-style token streaming ---------- */
+  const streamEl = document.getElementById('stream-text');
+  const cursorEl = document.getElementById('stream-cursor');
+  const intro = "Full Stack Developer & AI Engineer — 2+ years owning full SDLC delivery. Business Owner of AURA, an AI-powered SaaS live across 6 hotels, and builder of the Grevon concierge widget streaming responses over hand-rolled gRPC-web. I take products from architecture to deployment — then teach them to think.";
+  if(reduced){ streamEl.textContent = intro; cursorEl.style.display='none'; }
+  else{
+    let i = 0;
+    setTimeout(function tick(){
+      // stream in uneven "token" chunks like an LLM
+      const step = 2 + Math.floor(Math.random()*4);
+      i = Math.min(intro.length, i + step);
+      streamEl.textContent = intro.slice(0, i);
+      if(i < intro.length) setTimeout(tick, 18 + Math.random()*45);
+      else setTimeout(()=>cursorEl.style.display='none', 2600);
+    }, 1100);
+  }
 
-            
-          </div>
-          <div class="col s12 m6 l6">
-            <div class="card">
-              <div class="card-content">
-                <p>
-                  <span class="card-title"><a href="https://vitbhopal.ac.in/" target="_blank" class="teal-text hoverline">VIT Bhopal University</a></span>
-                </p>
-                <p class="brown-text">Bhopal, India</p>
-                <p>
-                  <b>Degree: </b>Bachelor of Technology in Computer Science and Engineering
-                  <br>
-                  <b>CGPA: </b>7.8/10
-                </p>
+  /* ---------- hero: node-graph constellation ---------- */
+  const canvas = document.getElementById('constellation');
+  const ctx = canvas.getContext('2d');
+  const DPR = Math.min(2, window.devicePixelRatio || 1);
+  let nodes = [], W = 0, H = 0, rafC = null, netRunning = false;
+  function sizeCanvas(){
+    const r = canvas.parentElement.getBoundingClientRect();
+    W = canvas.width = r.width * DPR;
+    H = canvas.height = r.height * DPR;
+  }
+  function initNodes(){
+    const n = Math.min(46, Math.floor(W/(38*DPR)) + 14);
+    nodes = Array.from({length:n}, () => ({
+      x: Math.random()*W, y: Math.random()*H,
+      vx:(Math.random()-.5)*.18*DPR,
+      vy:(Math.random()-.5)*.18*DPR,
+      r:(1+Math.random()*1.6)*DPR
+    }));
+  }
+  function drawFrame(){
+    ctx.clearRect(0,0,W,H);
+    const link = 130*DPR;
+    for(let i=0;i<nodes.length;i++){
+      const a = nodes[i];
+      a.x+=a.vx; a.y+=a.vy;
+      if(a.x<0||a.x>W) a.vx*=-1;
+      if(a.y<0||a.y>H) a.vy*=-1;
+      for(let j=i+1;j<nodes.length;j++){
+        const b = nodes[j], dx=a.x-b.x, dy=a.y-b.y, d=Math.hypot(dx,dy);
+        if(d<link){
+          ctx.strokeStyle = 'rgba(95,212,244,'+(0.14*(1-d/link))+')';
+          ctx.lineWidth = DPR*.7;
+          ctx.beginPath(); ctx.moveTo(a.x,a.y); ctx.lineTo(b.x,b.y); ctx.stroke();
+        }
+      }
+      ctx.fillStyle = 'rgba(95,212,244,.5)';
+      ctx.beginPath(); ctx.arc(a.x,a.y,a.r,0,Math.PI*2); ctx.fill();
+    }
+  }
+  function loop(){ drawFrame(); rafC = requestAnimationFrame(loop); }
+  function startNet(){ if(!netRunning && !reduced){ netRunning = true; rafC = requestAnimationFrame(loop); } }
+  function stopNet(){ netRunning = false; cancelAnimationFrame(rafC); }
+  sizeCanvas(); initNodes(); drawFrame();
+  if(!reduced){
+    // run only while the hero is actually visible — saves battery on mobile
+    new IntersectionObserver(es => es.forEach(e => e.isIntersecting ? startNet() : stopNet()))
+      .observe(canvas);
+    document.addEventListener('visibilitychange', () =>
+      document.hidden ? stopNet() : (isHeroVisible() && startNet()));
+  }
+  function isHeroVisible(){
+    const r = canvas.getBoundingClientRect();
+    return r.bottom > 0 && r.top < window.innerHeight;
+  }
+  window.addEventListener('resize', ()=>{ sizeCanvas(); initNodes(); drawFrame(); });
 
-                <ul>
-                  <p>
-                    <b>Relevant Courseworks:</b>
-                  <ul>
-                    <li>Data Structures and Algorithms</li>
-                    <li>Database Management Systems</li>
-                    <li>Operating Systems</li>
-                  </ul>
-                  </p>
+  /* ---------- generic scroll reveals ---------- */
+  const io = new IntersectionObserver(entries=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  }, {threshold:.15, rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal, .tl-item').forEach(el=>io.observe(el));
 
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Eight Section: Contact -->
-    <section id="contact" class="section scrollspy full-height">
-      <h3 class="page-title white-text teal">Contact</h3>
-      <div class="container">
-        <p>
-          <a aria-label="Email Varad" href="mailto:rishabhmathur2404@gmail.com" target="_blank" data-position="top"
-            data-tooltip="Email Varad" class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-              class="fa fa-envelope"></i><a aria-label="Email Varad" href="mailto:rishabhmathur2404@gmail.com"
-              class="hoverline">rishabhmathur2404@gmail.com</a></a>
-        </p>
-        <p>
-          <a aria-label="View Varad on GitHub" href="https://github.com/RishabhMathur-2404" target="_blank"
-            data-position="top" data-tooltip="View Varad on GitHub"
-            class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i class="fa fa-github"></i><a
-              aria-label="Varad on Github" href="https://github.com/RishabhMathur-2404" class="hoverline"
-              target="_blank">https://github.com/RishabhMathur-2404</a></a>
-        </p>
-        <p>
-          <a aria-label="View Varad on LinkedIn" href="https://www.linkedin.com/in/rishabh-mathur-087820212/" target="_blank"
-            data-position="top" data-tooltip="View Varad on LinkedIn"
-            class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-              class="fa fa-linkedin"></i><a aria-label="Varad on LinkedIn" href="https://www.linkedin.com/in/rishabh-mathur-087820212/"
-              class="hoverline" target="_blank">https://www.linkedin.com/in/rishabh-mathur-087820212/</a></a>
-        </p>
-      </div>
-    </section>
-  </main>
-
-  <!-- typed.js -->
-  <script src="assets/vendor/typed.js/typed.min.js"></script>
-  <script type="text/javascript">
-    var typed = new Typed('.typing',{
-      strings: ["Developer", "Fast Learner"],
-      loop: true,
-      typeSpeed: 80,
-      backSpeed: 40
+  /* ---------- stat counters ---------- */
+  const statIO = new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(!e.isIntersecting) return;
+      statIO.unobserve(e.target);
+      const el = e.target, target = +el.dataset.count, t0 = performance.now(), dur = 1400;
+      if(reduced){ el.textContent = target; return; }
+      (function step(t){
+        const p = Math.min(1,(t-t0)/dur), ease = 1-Math.pow(1-p,3);
+        el.textContent = Math.round(target*ease);
+        if(p<1) requestAnimationFrame(step);
+      })(t0);
     });
-  </script>
+  }, {threshold:.6});
+  document.querySelectorAll('[data-count]').forEach(el=>statIO.observe(el));
 
+  /* ---------- FLYING TIMELINE: self-drawing path + traveling agent ---------- */
+  const wrap   = document.getElementById('tl-wrap');
+  const svg    = document.getElementById('tl-svg');
+  const path   = document.getElementById('tl-path');
+  const pathBg = document.getElementById('tl-path-bg');
+  const nodesG = document.getElementById('tl-nodes');
+  const agent  = document.getElementById('tl-agent');
+  const ring   = document.getElementById('tl-agent-ring');
+  let pathLen = 0, nodeLens = [], nodeEls = [];
 
-  <!-- jQuery-->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  function buildPath(){
+    const wr = wrap.getBoundingClientRect();
+    const items = [...wrap.querySelectorAll('.tl-item')];
+    if(!items.length) return;
+    svg.setAttribute('viewBox', '0 0 ' + wr.width + ' ' + wr.height);
+    const mobile = window.innerWidth <= 860;
+    const cx = mobile ? 26 : wr.width/2;
+    const amp = mobile ? 0 : Math.min(140, wr.width*0.13);
 
-  <!-- Materialize - Compiled and minified JavaScript-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/js/materialize.min.js"></script>
-  <script>
-    // Materialize - Initializers
-    $(document).ready(function () {
-      $(".scrollspy").scrollSpy()
-      // Initialize collapse button
-      $(".button-collapse").sideNav({
-        menuWidth: 190, // Default is 240
-        edge: "left", // Choose the horizontal origin
-        closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
-      })
-    })
-  </script>
+    // anchor: vertical midpoint of each card, x swings toward the card side
+    const pts = [{x:cx, y:0}];
+    items.forEach((it,i)=>{
+      const y = it.offsetTop + it.offsetHeight/2;
+      const x = mobile ? cx : (i%2===0 ? cx - amp : cx + amp) ;
+      pts.push({x:x, y:y});
+    });
+    pts.push({x:cx, y:wr.height});
+
+    let d = 'M ' + pts[0].x + ' ' + pts[0].y;
+    for(let i=1;i<pts.length;i++){
+      const p0 = pts[i-1], p1 = pts[i], my = (p0.y+p1.y)/2;
+      d += ' C ' + p0.x + ' ' + my + ', ' + p1.x + ' ' + my + ', ' + p1.x + ' ' + p1.y;
+    }
+    path.setAttribute('d', d);
+    pathBg.setAttribute('d', d);
+    pathLen = path.getTotalLength();
+    path.style.strokeDasharray = pathLen;
+    path.style.strokeDashoffset = pathLen;
+
+    // node markers at each card anchor — find their length along the path
+    nodesG.innerHTML = ''; nodeLens = []; nodeEls = [];
+    const samples = 220;
+    items.forEach((it,i)=>{
+      const target = pts[i+1];
+      let bestL = 0, bestD = Infinity;
+      for(let s=0;s<=samples;s++){
+        const L = pathLen*s/samples, p = path.getPointAtLength(L);
+        const dd = Math.abs(p.y-target.y) + Math.abs(p.x-target.x)*0.3;
+        if(dd<bestD){bestD=dd;bestL=L;}
+      }
+      nodeLens.push(bestL);
+      const p = path.getPointAtLength(bestL);
+      const c = document.createElementNS('http://www.w3.org/2000/svg','circle');
+      c.setAttribute('cx',p.x); c.setAttribute('cy',p.y); c.setAttribute('r',5);
+      c.setAttribute('class','tl-node');
+      nodesG.appendChild(c); nodeEls.push(c);
+    });
+    onScroll();
+  }
+
+  let pulse = 0;
+  function onScroll(){
+    if(!pathLen) return;
+    const r = wrap.getBoundingClientRect();
+    const focus = window.innerHeight * 0.62;            // draw-head sits ~62% down the viewport
+    const progress = Math.min(1, Math.max(0, (focus - r.top) / r.height));
+    const drawn = pathLen * progress;
+    path.style.strokeDashoffset = Math.max(0, pathLen - drawn);
+
+    if(!reduced){
+      const p = path.getPointAtLength(drawn);
+      agent.setAttribute('cx', p.x); agent.setAttribute('cy', p.y);
+      pulse += .08;
+      const rr = 9 + Math.sin(pulse)*3;
+      ring.setAttribute('cx', p.x); ring.setAttribute('cy', p.y);
+      ring.setAttribute('r', rr);
+      ring.setAttribute('opacity', .35 + .25*Math.sin(pulse));
+    }
+    nodeEls.forEach((c,i)=> c.classList.toggle('lit', drawn >= nodeLens[i]-2));
+  }
+
+  let ticking = false;
+  window.addEventListener('scroll', ()=>{
+    if(ticking) return; ticking = true;
+    requestAnimationFrame(()=>{ onScroll(); ticking = false; });
+  }, {passive:true});
+
+  // rebuild whenever layout can change — resize, rotation, font load, card reflow
+  let rb = null;
+  function rebuild(){ clearTimeout(rb); rb = setTimeout(buildPath, 120); }
+  window.addEventListener('resize', rebuild);
+  window.addEventListener('orientationchange', rebuild);
+  window.addEventListener('load', buildPath);
+  if(document.fonts && document.fonts.ready) document.fonts.ready.then(buildPath);
+  if('ResizeObserver' in window){
+    new ResizeObserver(rebuild).observe(wrap);
+  }
+  buildPath();
+})();
+</script>
 </body>
-
 </html>
